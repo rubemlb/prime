@@ -1,0 +1,11 @@
+.r {
+    text-shadow: 1px 1px black;
+}
+.t{
+    /*color:black;*/
+    text-shadow: 1px 1px 1px black, 0 0 1px black, 0 0 1px black;
+}
+
+.navr{
+
+}

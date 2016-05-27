@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hotel A Bela Sombra</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="star/jquery.rating.css">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/r.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+        div#google_translate_element div.goog-te-gadget-simple{background-color: transparent; border: transparent;}
+        div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span{color:white}
+        section{
+            padding: 80px 0px;
+        }
+        #booking ::-webkit-input-placeholder {
+           color: #555555 !important;
+        }
+
+        #booking :-moz-placeholder { /* Firefox 18- */
+           color: #555555 !important;
+        }
+
+        #booking ::-moz-placeholder {  /* Firefox 19+ */
+           color: #555555 !important;
+        }
+
+        #booking :-ms-input-placeholder {
+           color: #555555 !important;
+        }
+
+    </style>
+    <script>
+    function googleTranslateElementInit() 
+    {
+        new google.translate.TranslateElement({
+        pageLanguage: 'pt',
+        includedLanguages: 'ca,da,de,el,en,es,fr,it,ja,ko,nl,pl,pt,ru,sv,tl',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+
+    function reserv(){
+        $('#arrival_date').val($('#data_chegada').val());
+        $('#departure_date').val($('#data_partida').val());
+        $('#rooms').val($('#quarto').val());
+        $('#adults').val($('#adultos').val());
+    }
+
+
+    </script>
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class=" page-scroll" href="#page-top"><img src="img/logo_o.png" style="margin-top: -20px height:10px width:auto " alt=""></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Serviços</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#quartos">Quartos</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#galeria">Galeria</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#satisfacao">Satisfação</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#reservas">Reservas</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contactos</a>
+                    </li>
+                    <li>
+                        <div id="google_translate_element" style="padding-top: 13px; padding-left: 10px"></div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in " style="color: #FFFFFF; text-shadow: 1px 1px 10px #575757;">Visit</div>
+                <div class="intro-heading t" style="color: #FFFFFF;">Ribeira Brava</div>
+                <img src="img/saonicolau.png" class="img-responsive center-block shade" style="max-height: 100px; max-width: 200px;" alt="">
+            </div>
+        </div>
+    </header>
+
+    <!--Booking Section-->
+    <section id="booking" style="border: #FFCC66 2px solid; padding-top: 50px; padding-bottom: 40px;" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <form>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg" id="data_chegada" name="data_chegada" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Check-in">
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg" id="data_partida" name="data_partida" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Check-out" >
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="form-group">
+                                <select class="form-control input-lg" id="quarto" name="quarto">
+                                  <option disabled selected value> Quartos </option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                  <option>6</option>
+                                  <option>7</option>
+                                  <option>8</option>
+                                  <option>9</option>
+                                  <option>10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="form-group">
+                                <select class="form-control input-lg" id="adultos" name="adultos">
+                                  <option disabled selected value> Adultos </option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                  <option>6</option>
+                                  <option>7</option>
+                                  <option>8</option>
+                                  <option>9</option>
+                                  <option>10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="form-group">
+                                <a href="index.html#reservas" id="booking_reservar" class="btn btn-primary btn-lg" onclick="reserv()">Reservar <span class="glyphicon glyphicon-ok"></span></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- about as-->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="section-heading">Sobre Nós</h2> 
+                    <br>  
+                </div>
+            </div>
+
+            <div class="row">
+                <div class=" col-md-6" style="padding-left: 100px;">
+                    <img src="img/about.jpg" class="img-responsive sh visible-lg visible-md" alt="" style=" width: 400px; height: ">
+                </div> 
+                <div class="col-md-4 centered">
+                    <h3 class="section-subheading text-muted" style="margin-top: -2px" >
+                    <strong>Residencial Bela Sombra</strong> está localizado no centro da Ribeira Brava, a cerca de 200 metros da igreja matriz. Tendo como principal preocupação a satisfação das expectativas dos seus clientes, tem à sua disposição vinte quartos, todos equipados com ar condicionado, telefone, televisão via satélite, água quente e fria, frigobar, secretária, internet wireless e muito mais!
+                    O nosso estabelecimento está equipado com sistema anti-incêndios, telefone, varanda, áreas para fumadores e não fumadores, sala de jantar, de pequeno almoço e sala de TV, e ainda um bar onde poderá aproveitar para relaxar ao som da música ambiente.
+                    Os anfitriões de tudo farão para que a sua estadia seja a mais agradável possível!
+                    </h3> 
+                </div> 
+            </div>
+        </div>
+    </section>
+    <!-- end about as-->
+
+    <!-- Serviços Section -->
+    <section id="services" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Serviços</h2>
+                    <h3 class="section-subheading text-muted">O <b>Residencial Bela Sombra</b> existe para lhe servir e tornar a sua estadia, no nosso estabelecimento, na nossa Cidade e na nossa ilha, mais agradável! Em caso de dúvida, não hesite em contactar o nosso pessoal, que terá o maior prazer em lhe servir e ajudar!<br><br><b>Por isso, temos as seguintes comodidades disponíveis para si:</b></h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <ul style="text-align: justify; list-style: circle; list-style: circle">
+                        <li>TV a cabo/por assinatura</li>
+                        <li>Transferes</li>
+                        <li>Excursões</li>
+                        <li>Assistência no Aeroporto</li>
+                        <li>Refeições</li>
+                        <li>Envio/recepção de fax's</li>
+                        <li>Limpeza arrumação diária dos quartos</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul style="text-align: justify; list-style: circle">
+                        <li>Bar</li>
+                        <li>Esplanada</li>
+                        <li>Lavandaria</li>
+                        <li>Serviço de depósito de valores na recepção</li>
+                        <li>Serviço de Transporte privativo </li>
+                        <li>Serviço de atendimento semi-permanente</li>
+                        <li>Serviço d recepção multilingue</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul style="text-align: justify; list-style: circle">
+                        <li>Serviço de deposito de bagagens</li>
+                        <li>Serviçode refeições 7 dias por semana</li>
+                        <li>Serviço de transporte de bagagens</li>
+                        <li>Cofre</li>
+                        <li>Restaurante</li>
+                        <li>Colocação de Berços nos Quartos</li>
+                        <li>Colocação de Berço nos Quartos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quartos Section -->
+    <section id="quartos">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Quartos</h2>
+                    <h3 class="section-subheading text-muted">O Residencial Bela Sombra tem à sua disposição vinte quartos (individuais e duplos) muito confortáveis, decorados de forma simples e funcional com pequeno almoço, todos equipados com ar condicionado, telefone, televisão via satélite, água quente e fria, frigobar, secretária e internet wireless.(preço não inclui IVA e Taxa de Contribuição Turística)<p style="font-size:20px;"><strong>Venha e sinta-se em casa!</strong></p></h3> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 portfolio-item">
+                    <img src="img/quartos/1.jpg" class="img-responsive sh" alt="">
+                    <div class="portfolio-caption">
+                        <h4 style="padding-top: 8px;">SGL s/varanda - Individual</h4>
+                        <p class="text-muted">Apartir de: <strong>2200$00 </strong>por noite</p>
+                        <br>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 portfolio-item">
+                    <img src="img/quartos/2.jpg" class="img-responsive sh" alt="">
+                    <div class="portfolio-caption">
+                        <h4 style="padding-top: 8px;">DBL c/varanda - Duplo</h4>
+                        <br>
+                        <p class="text-muted">Apartir de: <strong>3800$00</strong> por noite</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6 portfolio-item">
+                    <img src="img/quartos/3.jpg" class="img-responsive sh" alt="">
+                    <div class="portfolio-caption">
+                        <h4 style="padding-top: 8px;">DBL s/varanda - Duplo</h4>
+                        <br>
+                        <p class="text-muted">Apartir de: <strong>3500$00 </strong>por noite</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6 portfolio-item">
+                    <img src="img/quartos/4.jpg" class="img-responsive sh" alt="">
+                    <div class="portfolio-caption">
+                        <h4 style="padding-top: 8px;">SGL c/varanda Individual</h4>
+                        <p class="text-muted">Apartir de: <strong>2800$00</strong> por noite</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Galeria Section -->
+    <section id="galeria" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Galeria</h2>
+                    <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="gallery">
+                        <div class="row">
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/1.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/1.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/2.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/2.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/3.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/3.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/4.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/4.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/5.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/5.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/6.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/6.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/7.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/7.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/8.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/8.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/9.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/9.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/10.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/10.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/11.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/11.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/12.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/12.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/13.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/13.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/14.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/14.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/15.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/15.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/16.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/16.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/17.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/17.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/18.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/18.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/19.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/19.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <br>
+                                <a href="img/galeria/20.jpg" data-title="" data-lightbox="prim">
+                                    <img src="img/galeria/20.jpg" style="width:auto;  height:200px" class="img-thumbnail" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Satisfação Section -->
+    <section id="satisfacao">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Satisfação</h2>
+                    <h3 class="section-subheading text-muted">Caro (a) Hóspede,<br><br>Para a Aldeia Jerome, o conforto, segurança e qualidade da sua estada entre nós é, para nós, de extrema importância.<br>É nossa firme convicção que a sua opinião e avaliação contribuirão para a melhoria contínua dos nossos serviços. Assim, convidamos-lhe a responder ao seguinte questionário, agradecendo, desde já, a sua valiosa colaboração.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <form action="enviar_email.php" name="satisfacao" method="post" autocomplete="off " style="border: #FFCC66 1px solid; padding: 15px 15px">
+                  <h3>Dados Pessoais</h3>
+                  <hr>
+                  <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="nome" class="col-sm-2 control-label" style="text-align: left">Nome <span style="color: #CC0000">*</span></label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="nome" placeholder="Nome" required="required">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="num_quarto" class="col-sm-2 control-label" style="text-align: left">Nº Quarto <span style="color: #CC0000">*</span></label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="num_quarto" placeholder="Numero do Quarto" required="required">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="nacionalidade" class="col-sm-2 control-label" style="text-align: left">Nacionalidade <span style="color: #CC0000">*</span></label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="nacionalidade" placeholder="Nacionalidade" required="required">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="email" class="col-sm-2 control-label" style="text-align: left">Email <span style="color: #CC0000">*</span></label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+                        </div>
+                    </div>
+                  </div>
+
+                  <br>
+
+                  <p class="text-muted"><b>Como conheceu esta unidade?</b></p>
+                  <label class="radio-inline">
+                     <input type="radio" name="conhecimento" value="amig_parent" required="required"> Por indicação de Amigos e Parentes
+                  </label>
+                  <label class="radio-inline">
+                     <input type="radio" name="conhecimento" value="pub"> Publicidade
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="conhecimento" value="busca"> Motor de Busca <span style="color: #CC0000">*</span>
+                  </label>
+                  <br>
+                  <br>
+                  <p class="text-muted"><b>Qual foi o motivo da sua estadia?</b></p>
+                  <label class="radio-inline">
+                     <input type="radio" name="motivo" value="ferias" required="required"> Férias/Lazer
+                  </label>
+                  <label class="radio-inline">
+                     <input type="radio" name="motivo" value="negocios"> Negócios
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="motivo" value="outro"> Outro <span style="color: #CC0000">*</span>
+                  </label>
+                  <br>
+                  <br>
+
+                  <h3>Como avalia os seguintes itens</h3>
+                  <hr>
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group">
+                                <p class="text-muted"><b>Atendimento no momento da Reserva</b></p>
+                                <input name="reserva" type="radio" class="star" value="1" />
+                                <input name="reserva" type="radio" class="star" value="2" />
+                                <input name="reserva" type="radio" class="star" value="3" />
+                                <input name="reserva" type="radio" class="star" value="4" />
+                                <input name="reserva" type="radio" class="star" value="5" />
+                            <br>
+                          </div>
+                          <div class="form-group">
+                                <p class="text-muted"><b>Atendimento ao Balcão/Recepção</b></p>
+                                <input name="recepcao" type="radio" class="star" value="1" />
+                                <input name="recepcao" type="radio" class="star" value="2" />
+                                <input name="recepcao" type="radio" class="star" value="3" />
+                                <input name="recepcao" type="radio" class="star" value="4" />
+                                <input name="recepcao" type="radio" class="star" value="5" />
+                            <br>
+                          </div>
+                          <div class="form-group">
+                                <p class="text-muted"><b>Simpatia dos funcionários</b></p>
+                                <input name="simpatia" type="radio" class="star" value="1" />
+                                <input name="simpatia" type="radio" class="star" value="2" />
+                                <input name="simpatia" type="radio" class="star" value="3" />
+                                <input name="simpatia" type="radio" class="star" value="4" />
+                                <input name="simpatia" type="radio" class="star" value="5" />
+                            <br>
+                          </div>
+                          <div class="form-group">
+                                <p class="text-muted"><b>Serviço de “Check-In”</b></p>
+                                <input name="check_in" type="radio" class="star" value="1" />
+                                <input name="check_in" type="radio" class="star" value="2" />
+                                <input name="check_in" type="radio" class="star" value="3" />
+                                <input name="check_in" type="radio" class="star" value="4" />
+                                <input name="check_in" type="radio" class="star" value="5" />
+                            <br>
+                          </div>
+                          <div class="form-group">
+                                <p class="text-muted"><b>Serviço de “Check-Out”</b></p>
+                                <input name="check_out" type="radio" class="star" value="1" />
+                                <input name="check_out" type="radio" class="star" value="2" />
+                                <input name="check_out" type="radio" class="star" value="3" />
+                                <input name="check_out" type="radio" class="star" value="4" />
+                                <input name="check_out" type="radio" class="star" value="5" />
+                            <br>
+                          </div>
+                          <div class="form-group">
+                                <p class="text-muted"><b>Segurança</b></p>
+                                <input name="seguranca" type="radio" class="star" value="1" />
+                                <input name="seguranca" type="radio" class="star" value="2" />
+                                <input name="seguranca" type="radio" class="star" value="3" />
+                                <input name="seguranca" type="radio" class="star" value="4" />
+                                <input name="seguranca" type="radio" class="star" value="5" />
+                            <br>
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6">
+                        <div class="form-group">
+                                <p class="text-muted"><b>Comforto e Limpeza dos Quartos</b></p>
+                                <input name="limpeza" type="radio" class="star" value="1" />
+                                <input name="limpeza" type="radio" class="star" value="2" />
+                                <input name="limpeza" type="radio" class="star" value="3" />
+                                <input name="limpeza" type="radio" class="star" value="4" />
+                                <input name="limpeza" type="radio" class="star" value="5" />
+                            <br>
+                          </div>
+                          <div class="form-group">
+                                <p class="text-muted"><b>Serviço de Pequeno-Almoço</b></p>
+                                <input name="peq_almoco" type="radio" class="star" value="1" />
+                                <input name="peq_almoco" type="radio" class="star" value="2" />
+                                <input name="peq_almoco" type="radio" class="star" value="3" />
+                                <input name="peq_almoco" type="radio" class="star" value="4" />
+                                <input name="peq_almoco" type="radio" class="star" value="5" />
+                            <br>
+                          </div>
+                          <div class="form-group">
+                                <p class="text-muted"><b>Envolvente externo ao empreendimento</b></p>
+                                <input name="empreend" type="radio" class="star" value="1" />
+                                <input name="empreend" type="radio" class="star" value="2" />
+                                <input name="empreend" type="radio" class="star" value="3" />
+                                <input name="empreend" type="radio" class="star" value="4" />
+                                <input name="empreend" type="radio" class="star" value="5" />
+                            <br>
+                          </div>
+                          <div class="form-group">
+                                <p class="text-muted"><b>Serviço de Internet</b></p>
+                                <input name="internet" type="radio" class="star" value="1" />
+                                <input name="internet" type="radio" class="star" value="2" />
+                                <input name="internet" type="radio" class="star" value="3" />
+                                <input name="internet" type="radio" class="star" value="4" />
+                                <input name="internet" type="radio" class="star" value="5" />
+                            <br>
+                          </div>
+                          <div class="form-group">
+                                <p class="text-muted"><b>Acessibilidade ao empreendimento</b></p>
+                                <input name="access_emp" type="radio" class="star" value="1" />
+                                <input name="access_emp" type="radio" class="star" value="2" />
+                                <input name="access_emp" type="radio" class="star" value="3" />
+                                <input name="access_emp" type="radio" class="star" value="4" />
+                                <input name="access_emp" type="radio" class="star" value="5" />
+                            <br>
+                          </div>
+                          <div class="form-group">
+                                <p class="text-muted"><b>Acessibilidade à Ilha</b></p>
+                                <input name="access_ilha" type="radio" class="star" value="1" />
+                                <input name="access_ilha" type="radio" class="star" value="2" />
+                                <input name="access_ilha" type="radio" class="star" value="3" />
+                                <input name="access_ilha" type="radio" class="star" value="4" />
+                                <input name="access_ilha" type="radio" class="star" value="5" />
+                            <br>
+                          </div>
+                      </div>
+                  </div>
+                  <hr>
+                  <h3>De modo geral, como classifica a sua estadia no empreendimento?</h3>
+                  <div class="form-group">
+                        <input name="estadia" type="radio" class="star" value="1" />
+                        <input name="estadia" type="radio" class="star" value="2" />
+                        <input name="estadia" type="radio" class="star" value="3" />
+                        <input name="estadia" type="radio" class="star" value="4" />
+                        <input name="estadia" type="radio" class="star" value="5" />
+                    <br>
+                  </div>
+                  <hr>
+                  <div class="form-group">
+                    <label for="comentarios">Comentários</label>
+                    <div>
+                        <textarea class="form-control" name="comentarios" rows="4" placeholder="Comentários..."></textarea>
+                    </div>
+                  </div>
+                  <br>
+
+                  <button type="submit" name="submit" class="btn btn-primary">Enviar</button>
+                  <br>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservas Section -->
+    <section id="reservas" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Pedido de Reservas</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="form-horizontal" action="enviar_reserva.php" name="reserva" method="post" autocomplete="off" role="form" style="border: #FFCC66 1px solid; padding: 15px 15px">
+                      <div class="form-group">
+                        <label for="data_chegada" class="col-sm-2 control-label" style="text-align: left">Data Chegada <span style="color: #CC0000">*</span></label>
+                        <div class="col-sm-3">
+                          <input type="date" class="form-control" id="arrival_date" name="arrival_date" placeholder="Data Chegada" required="required">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="data_partida" class="col-sm-2 control-label" style="text-align: left">Data Partida <span style="color: #CC0000">*</span></label>
+                        <div class="col-sm-3">
+                          <input type="date" class="form-control" id="departure_date" name="departure_date" placeholder="Data Partida" required="required">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="quartos" class="col-sm-2 control-label" style="text-align: left">Quartos <span style="color: #CC0000">*</span></label>
+                        <div class="col-sm-3">
+                            <select class="form-control" id="rooms" name="rooms" required="required">
+                                <option disabled selected value> Selecione uma opção </option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="adultos" class="col-sm-2 control-label" style="text-align: left">Adultos <span style="color: #CC0000">*</span></label>
+                        <div class="col-sm-3">
+                            <select class="form-control" id="adults" name="adults" required="required">
+                                <option disabled selected value> Selecione uma opção </option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="nome" class="col-sm-2 control-label" style="text-align: left">Nome <span style="color: #CC0000">*</span></label>
+                        <div class="col-sm-5">
+                          <input type="text" class="form-control" id="name" name="name" placeholder="" required="required">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="apelido" class="col-sm-2 control-label" style="text-align: left">Apelido <span style="color: #CC0000">*</span></label>
+                        <div class="col-sm-5">
+                          <input type="text" class="form-control" id="surname" name="surname" placeholder="" required="required">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="email" class="col-sm-2 control-label" style="text-align: left">Email <span style="color: #CC0000">*</span></label>
+                        <div class="col-sm-5">
+                          <input type="email" class="form-control" id="email" name="email" placeholder="" required="required">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="num_doc" class="col-sm-2 control-label" style="text-align: left">Nº de documento <span style="color: #CC0000">*</span></label>
+                        <div class="col-sm-5">
+                          <input type="text" class="form-control" id="num_doc" name="num_doc" placeholder="" required="required">
+                          <p class="help-block">Pode indicar o nº de BI ou de Passaporte</p>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="telefone" class="col-sm-2 control-label" style="text-align: left">Telefone <span style="color: #CC0000">*</span></label>
+                        <div class="col-sm-5">
+                          <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="" required="required">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="endereco" class="col-sm-2 control-label" style="text-align: left">Endereço <span style="color: #CC0000">*</span></label>
+                        <div class="col-sm-5">
+                          <input type="text" class="form-control" id="address" name="address" placeholder="" required="required">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="pais_origem" class="col-sm-2 control-label" style="text-align: left">País de Origem</label>
+                        <div class="col-sm-5">
+                          <input type="text" class="form-control" id="origin_country" name="origin_country" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="nacionalidade" class="col-sm-2 control-label" style="text-align: left">Nacionalidade</label>
+                        <div class="col-sm-5">
+                          <input type="text" class="form-control" id="nationality" name="nationality" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="mot_viagem" class="col-sm-2 control-label" style="text-align: left">Motivo da Viagem</label>
+                        <div class="col-sm-5">
+                          <input type="text" class="form-control" id="travel_motive" name="travel_motive" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="info" class="col-sm-2 control-label" style="text-align: left">Informações adicionais</label>
+                        <div class="col-sm-5">
+                            <textarea class="form-control" id="info" name="info" rows="4" placeholder=""></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="num_cama_ext" class="col-sm-2 control-label" style="text-align: left">Nº de camas extra</label>
+                        <div class="col-sm-5">
+                          <input type="number" class="form-control" id="number_extra_bed" name="number_extra_bed" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <p style="color: #CC0000">*Campos de preenchimento obrigatório.</p>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <button type="submit" name="submit" class="btn btn-primary">Reservar</button>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contacte-nos</h2>
+                    <h3 class="section-subheading text-muted" style="color: white">
+                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    <strong>Residencial Bela Sombra</strong> - Vila Ribeira Brava - São Nicolau - Cabo Verde<br><br><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> 
+                    
+                    <a href="mailto:#">
+                        fsantos@cvtelecom.cv
+                    </a>
+                    <a href="mailto:#">
+                       fsantos57@hotmail.com
+                    </a>
+                      <a href="mailto:#">
+                       comercial@belasombra.cv
+                    </a>
+
+                    <br><br><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> <abbr title="Telefone"><strong>Telef.:</strong></abbr> +238 223 21 73 / Fax: +238 235 1831 / Cell: +238 994 5969
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+              
+                <div class="col-lg-12">
+                    <form name="contacto" id="contacto" action="enviar_contacto.php" method="post" autocomplete="off" role="form">
+                        <div class="row">
+                            <!-- map google -->
+                            <div class="col-md-4 img-responsive" id="map"></div>
+
+                            <div class="col-md-4">
+                                <div class="visible-xs visible-sm">
+                                    <br><br>
+                                </div>
+                                                               
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Your Message *" id="info" name="info" required></textarea>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <button type="submit" class="btn btn-xl">Enviar Mensagem</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; eTourism Project by <b>Prime Consulting</b></span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Termos</a>
+                        </li>
+                        <li>&middot;</li>
+                        <li><a href="#">Privacidade</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/agency.js"></script>
+    <script src="js/lightbox.min.js"></script>
+
+
+    <script src='star/jquery.MetaData.js' type="text/javascript"></script>
+    <script src='star/jquery.rating.js' type="text/javascript"></script>
+
+    <!-- Google Translate -->
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Google Maps -->
+    
+    <script>
+          
+      function initMap() {
+          var myLatLng = {lat: 16.615933, lng: -24.297506};
+          var mapDiv = document.getElementById('map');
+          var map = new google.maps.Map(mapDiv, {
+              center: myLatLng,
+              zoom: 16
+          });
+          var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+          var marker = new google.maps.Marker({
+              position: myLatLng,
+              map: map,
+              icon: iconBase + 'schools_maps.png'
+          });
+          var marker = new google.maps.Marker({
+              position: myLatLng,
+              map: map,
+              title: 'Residential Bela Sombra'
+          });
+          var infowindow = new google.maps.InfoWindow({
+              content:"Residential Bela Sombra"
+          });
+          infowindow.open(map,marker);
+      }
+
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'pt',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+    <style>
+      #map {
+        height: 240px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+
+</body>
+
+</html>
